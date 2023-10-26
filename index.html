@@ -15,9 +15,24 @@
     <button onclick="setAlarm()">set alarm</button>
     <button onclick="stopAlarm()">stop alarm</button>
    <script type="text/javascript">
-    let hour,minutes,seconds,myMusic;
+    let hour,minutes,seconds,myMusic,num=5.8;
     function stopAlarm() {
-        myMusic.pause()
+
+        let valueEntered=prompt(`6x+1=3.What is the value of x?`)
+        if (valueEntered==3) {
+            myMusic.pause()
+            
+            
+        }else{
+            ceilValue=Math.ceil(num);
+            ceilValue=prompt(" if num=5.8,what is the value of a ceilvalue?")
+            if (ceilValue==6) {
+                // alert("ayoola")
+                myMusic.pause()
+            
+                
+            }
+        }
         
     }
     function setAlarm(){
