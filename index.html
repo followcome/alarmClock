@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="hr"></span>:
+    <span id="min"></span>:
+    <span id="sec"></span>
+    <input type="number" id="inpHr">
+    <input type="number"  id="inpMin">
+    <input type="number" id="inpSec">
+    <button onclick="setAlarm()">set alarm</button>
+   <script type="text/javascript">
+    let hour,minutes,seconds;
+    function setAlarm(){
+     hour=inpHr.value;
+     minutes=inpMin.value;
+     seconds=inpSec.value;
+     
+    }
+
+function myFunc() {
+    let getDate=new Date;
+    hr.innerText=getDate.getHours();
+    min.innerText=getDate.getMinutes();
+    sec.innerText=getDate.getSeconds();
+    if (hour==hr.innerText && minutes==min.innerText && seconds==sec.innerText) {
+        let myMusic=new Audio("audio.mp3");
+        myMusic.play();
+        
+     }
+   
+    
+}
+setInterval(myFunc,1000);
+
+   
+
+   </script> 
+</body>
+</html>
