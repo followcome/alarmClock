@@ -13,8 +13,13 @@
     <input type="number"  id="inpMin">
     <input type="number" id="inpSec">
     <button onclick="setAlarm()">set alarm</button>
+    <button onclick="stopAlarm()">stop alarm</button>
    <script type="text/javascript">
-    let hour,minutes,seconds;
+    let hour,minutes,seconds,myMusic;
+    function stopAlarm() {
+        myMusic.pause()
+        
+    }
     function setAlarm(){
      hour=inpHr.value;
      minutes=inpMin.value;
@@ -28,7 +33,7 @@ function myFunc() {
     min.innerText=getDate.getMinutes();
     sec.innerText=getDate.getSeconds();
     if (hour==hr.innerText && minutes==min.innerText && seconds==sec.innerText) {
-        let myMusic=new Audio("audio.mp3");
+        myMusic=new Audio("audio.mp3");
         myMusic.play();
         
      }
